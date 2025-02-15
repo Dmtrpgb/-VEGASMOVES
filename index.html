@@ -71,13 +71,15 @@
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: -2;
       background: radial-gradient(circle, rgba(255, 215, 0, 0.2), rgba(255, 0, 0, 0.1) 70%);
     }
     .particles {
       position: absolute;
       width: 100%;
       height: 100%;
+      z-index: -1;
+      pointer-events: none;
     }
     .particle {
       position: absolute;
@@ -125,11 +127,11 @@
   <h1 id="headerTitle">Выберите игру</h1>
 
   <ul class="game-list">
-    <li><button class="game-button" onclick="openGame('https://volneer.github.io/jea/')">🎰 LuckyJet</button></li>
-    <li><button class="game-button" onclick="openGame('https://volneer.github.io/avai/')">✈️ Aviator</button></li>
-    <li><button class="game-button" onclick="openGame('https://onezelenka.github.io/Blume7Games/mines/')">💣 Mines</button></li>
-    <li><button class="game-button" onclick="openGame('https://volneer.github.io/raayl/')">👑 RoyalMines</button></li>
-    <li><button class="game-button" onclick="openGame('https://volneer.github.io/bb/')">💵 Bombucks</button></li>
+    <li><button class="game-button" onclick="openGame('https://example.com/luckyjet')">🎰 LuckyJet</button></li>
+    <li><button class="game-button" onclick="openGame('https://example.com/aviator')">✈️ Aviator</button></li>
+    <li><button class="game-button" onclick="openGame('https://example.com/mines')">💣 Mines</button></li>
+    <li><button class="game-button" onclick="openGame('https://example.com/royalmines')">👑 RoyalMines</button></li>
+    <li><button class="game-button" onclick="openGame('https://example.com/bombucks')">💵 Bombucks</button></li>
   </ul>
 
   <script>
