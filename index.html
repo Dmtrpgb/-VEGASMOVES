@@ -22,12 +22,15 @@
       position: relative;
       color: #fff;
     }
+    .content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+    }
     h1 {
       margin-bottom: 20px;
       font-size: 24px;
       text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
-      position: relative;
-      z-index: 10;
     }
     .language-select {
       position: absolute;
@@ -46,8 +49,7 @@
       padding: 0;
       width: 90%;
       max-width: 350px;
-      position: relative;
-      z-index: 10;
+      margin: 0 auto;
     }
     .game-list li {
       margin: 10px 0;
@@ -129,19 +131,20 @@
   <div class="background"></div>
   <div class="particles"></div>
 
-  <h1 id="headerTitle">Выберите игру</h1>
-
-  <ul class="game-list">
-    <li><button class="game-button" onclick="openGame('https://твоя-ссылка/luckyjet')">🎰 LuckyJet</button></li>
-    <li><button class="game-button" onclick="openGame('https://твоя-ссылка/aviator')">✈️ Aviator</button></li>
-    <li><button class="game-button" onclick="openGame('https://твоя-ссылка/mines')">💣 Mines</button></li>
-    <li><button class="game-button" onclick="openGame('https://твоя-ссылка/royalmines')">👑 RoyalMines</button></li>
-    <li><button class="game-button" onclick="openGame('https://твоя-ссылка/bombucks')">💵 Bombucks</button></li>
-  </ul>
+  <div class="content">
+    <h1 id="headerTitle">Выберите игру</h1>
+    <ul class="game-list">
+      <li><button type="button" class="game-button" onclick="openGame('https://твоя-ссылка/luckyjet')">🎰 LuckyJet</button></li>
+      <li><button type="button" class="game-button" onclick="openGame('https://твоя-ссылка/aviator')">✈️ Aviator</button></li>
+      <li><button type="button" class="game-button" onclick="openGame('https://onezelenka.github.io/Blume7Games/mines/')">💣 Mines</button></li>
+      <li><button type="button" class="game-button" onclick="openGame('https://твоя-ссылка/royalmines')">👑 RoyalMines</button></li>
+      <li><button type="button" class="game-button" onclick="openGame('https://твоя-ссылка/bombucks')">💵 Bombucks</button></li>
+    </ul>
+  </div>
 
   <script>
     function openGame(url) {
-      window.location.href = url;
+      window.open(url, '_blank');
     }
 
     // Создание анимированных частиц
